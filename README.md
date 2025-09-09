@@ -1,11 +1,5 @@
 # 🌸 Velora — Your Future in Smarter Beauty Choices
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Contributors](https://img.shields.io/github/contributors/<your-username>/velora)
-![Issues](https://img.shields.io/github/issues/<your-username>/velora)
-![Stars](https://img.shields.io/github/stars/<your-username>/velora?style=social)
-![Forks](https://img.shields.io/github/forks/<your-username>/velora?style=social)
 
 **Velora** is a modern beauty-tech platform built to help users discover smarter product alternatives, share authentic reviews, and engage in real-time beauty conversations.  
 Currently focused on **cosmetic dupes**, Velora is designed with scalability in mind — evolving into a full ecosystem for beauty, wellness, and lifestyle communities.  
@@ -39,23 +33,23 @@ Currently focused on **cosmetic dupes**, Velora is designed with scalability in 
 ---
 
 ## 📂 Project Structure
-   velora/
-   │── app/
-   │ ├── (auth)/ # Login, Register
-   │ ├── (products)/ # Product pages, dupes
-   │ ├── (blog)/ # Blog articles
-   │ ├── admin/ # Admin dashboard
-   │ ├── api/ # API routes
-   │ └── layout.tsx
-   │── components/
-   │ ├── ui/ # Reusable UI components
-   │ ├── product/ # Product cards, reviews
-   │ ├── chat/ # Chat components
-   │── lib/
-   │ ├── supabase.ts # Supabase client
-   │ ├── auth.ts # Auth helpers
-   │── public/ # Static assets
-   │── styles/ # Global styles
+     velora/
+     │── app/
+     │ ├── (auth)/ # Login, Register
+     │ ├── (products)/ # Product pages, dupes
+     │ ├── (blog)/ # Blog articles
+     │ ├── admin/ # Admin dashboard
+     │ ├── api/ # API routes
+     │ └── layout.tsx
+     │── components/
+     │ ├── ui/ # Reusable UI components
+     │ ├── product/ # Product cards, reviews
+     │ ├── chat/ # Chat components
+     │── lib/
+     │ ├── supabase.ts # Supabase client
+     │ ├── auth.ts # Auth helpers
+     │── public/ # Static assets
+     │── styles/ # Global styles
 
 
 ---
