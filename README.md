@@ -34,7 +34,7 @@ Currently focused on **cosmetic dupes**, Fuzzy-Broccoli is designed with scalabi
 ## 📂 Project Structure
 
 ```
-velora/
+fuzzy-broccoli/
 │── app/
 │ ├── (auth)/ # Login, Register
 │ ├── (products)/ # Product pages, dupes
