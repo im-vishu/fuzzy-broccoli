@@ -1,6 +1,40 @@
-# 🥦 Fuzzy-Broccoli
+# 🥦 fuzzy-broccoli — A Cosmetic Dupe Finder
 
-Fuzzy-Broccoli is a beauty dupe discovery app with a React frontend and a local Node.js backend. Users can browse affordable alternatives, search by category or brand, save favorites, manage a cart, place orders, submit dupe suggestions, and use admin APIs to manage products and submissions.
+**fuzzy-broccoli** is a modern full-stack web app for beauty lovers to discover affordable dupe alternatives for branded cosmetic products, share reviews, and join real-time discussions. The platform features an intuitive React + TypeScript frontend and a clean, local Node.js backend—with a powerful admin panel for managing products, submissions, and an SEO-friendly blog system.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:**  
+  React ▪ TypeScript ▪ Vite ▪ Tailwind CSS ▪ React Router ▪ shadcn/ui
+
+- **Backend:**  
+  Node.js (no frameworks, just core modules) ▪ Local file storage (JSON DB)
+
+- **Testing & Tooling:**  
+  Vitest ▪ ESLint ▪ npm scripts
+
+- **Other:**  
+  Proxy for dev, Bearer token auth, RESTful API
+
+---
+
+## 🗂 Project Structure
+
+```
+fuzzy-broccoli/
+├── client/         # Modern React + TypeScript frontend (Vite)
+│   ├── src/        # Core app source code
+│   └── ...         
+├── server/         # Node.js backend (API & JSON DB)
+│   └── data/       # Local database (db.json)
+├── package.json    # Root scripts (start, build, test)
+├── README.md       # You’re reading this!
+└── .gitignore
+```
+
+---
 
 ## ✨ Features
 
@@ -13,16 +47,7 @@ Fuzzy-Broccoli is a beauty dupe discovery app with a React frontend and a local 
 - 🛠️ Admin APIs for products, users, orders, stats, and submission moderation
 - 💾 File-backed local persistence in `server/data/db.json`
 
-## 🧱 Project Structure
-
-```text
-fuzzy-broccoli/
-├── client/          # Vite + React + TypeScript frontend
-├── server/          # Node.js backend API
-├── package.json     # Root scripts that delegate to client/server
-├── README.md
-└── .gitignore
-```
+---
 
 ## 🚀 Getting Started
 
@@ -56,6 +81,8 @@ Open the app:
 - 🌐 Frontend: `http://localhost:8080`
 - 🧪 Backend health check: `http://localhost:3001/api/health`
 
+---
+
 ## 📜 Scripts
 
 Run these from the project root:
@@ -69,18 +96,7 @@ npm run test          # Run frontend tests
 npm run test:server   # Run backend smoke test
 ```
 
-## 🖥️ Frontend
-
-The frontend lives in `client/` and uses:
-
-- ⚛️ React
-- ⚡ Vite
-- 🧭 React Router
-- 🎨 Tailwind CSS
-- 🧩 shadcn-style UI components
-- 🧪 Vitest
-
-The Vite dev server proxies `/api` requests to `http://localhost:3001`, so frontend code can call backend routes through `/api/...`.
+---
 
 ## 🗄️ Backend
 
@@ -99,32 +115,30 @@ Authenticated routes use:
 Authorization: Bearer <token>
 ```
 
+---
+
 ## 🔌 API Overview
 
-Health and catalog:
-
+**Health & Catalog**
 - `GET /api/health`
 - `GET /api/categories`
 - `GET /api/products`
 - `GET /api/products/:id`
 - `GET /api/products/:id/reviews`
 
-Auth and profile:
-
+**Auth & Profile**
 - `POST /api/auth/signup`
 - `POST /api/auth/login`
 - `POST /api/auth/logout`
 - `GET /api/me`
 - `PATCH /api/me`
 
-Favorites:
-
+**Favorites**
 - `GET /api/me/favorites`
 - `POST /api/me/favorites/:productId`
 - `DELETE /api/me/favorites/:productId`
 
-Cart and orders:
-
+**Cart & Orders**
 - `GET /api/cart`
 - `POST /api/cart/items`
 - `PATCH /api/cart/items/:productId`
@@ -134,14 +148,12 @@ Cart and orders:
 - `GET /api/orders`
 - `GET /api/orders/:id`
 
-Community:
-
+**Community**
 - `GET /api/dupe-submissions`
 - `POST /api/dupe-submissions`
 - `POST /api/reviews`
 
-Admin:
-
+**Admin**
 - `GET /api/admin/stats`
 - `GET /api/admin/users`
 - `GET /api/admin/orders`
@@ -150,9 +162,11 @@ Admin:
 - `DELETE /api/admin/products/:id`
 - `PATCH /api/admin/dupe-submissions/:id`
 
-## 🧪 Verification
+---
 
-Use these before pushing changes:
+## 🧪 Verification & Linting
+
+Before pushing, please run:
 
 ```bash
 npm run test:server
@@ -161,21 +175,30 @@ npm run lint
 npm run build
 ```
 
-Lint currently passes with warnings from shared UI files exporting helper values alongside components.
+> _Note: Linting passes with occasional UI export warnings, which are safe to ignore during normal UI refactoring._
 
-## 🧹 Local Data
+---
 
-Runtime files are intentionally ignored by Git:
+## 🧹 Local Data & Resetting
 
-- `server/data/db.json`
-- `*.log`
-- `client/dist/`
-- `client/node_modules/`
+The following files are git-ignored and safe to delete/recreate as needed:
 
-To reset local backend data, stop the server and delete:
-
-```text
+```
 server/data/db.json
+*.log
+client/dist/
+client/node_modules/
 ```
 
-The next server start will recreate it with seeded catalog/admin data.
+**Reset local backend data:**  
+_Stop the server, delete `server/data/db.json`, & start the backend again to regenerate with seeded demo data._
+
+---
+
+## 📄 License
+
+[MIT](LICENSE)
+
+---
+
+> Made with ❤️ for the beauty community. PRs and suggestions are welcome!
