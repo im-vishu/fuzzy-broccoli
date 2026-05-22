@@ -7,9 +7,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build output
+dist/
+dist-ssr/
+client/dist/
+client/dist-ssr/
+
+# Runtime data
+server/data/*.json
+!server/data/.gitkeep
+
+# Env files
+.env
+.env.*
+!.env.example
 *.local
 
 # Editor directories and files
