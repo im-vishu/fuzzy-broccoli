@@ -1,0 +1,11 @@
+{
+  "name": "fuzzy-broccoli-server",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node scripts/smoke-test.mjs"
+  }
+}
